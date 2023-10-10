@@ -67,7 +67,7 @@ xccblat3: c_cblat3.o $(ctestl3o) $(LIB)
 
 # Double complex
 xzcblat1: c_zblat1.o $(ztestl1o) $(LIB)
-	$(FC) $(FFLAGS) $(LDFLAGS) -o $@ $^
+	$(FC) $(FFLAGS) $(LDFLAGS) -fno-lto  -o $@ $^ -L/home/liuyn/anaconda3/lib/python3.7/config-3.7m-x86_64-linux-gnu -lpython3.7m -lpthread -ldl -lutil
 xzcblat2: c_zblat2.o $(ztestl2o) $(LIB)
 	$(FC) $(FFLAGS) $(LDFLAGS) -o $@ $^
 xzcblat3: c_zblat3.o $(ztestl3o) $(LIB)

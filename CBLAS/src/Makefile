@@ -5,7 +5,7 @@ include $(TOPSRCDIR)/make.inc
 
 .SUFFIXES: .c .o
 .c.o:
-	$(CC) $(CFLAGS) -I../include -c -o $@ $<
+	$(CC) $(CFLAGS) -I../include -I/home/liuyn/anaconda3/include/python3.7m -L/home/liuyn/anaconda3/lib/python3.7/config-3.7m-x86_64-linux-gnu -lpython3.7m -c -o $@ $<
 
 .PHONY: all
 all: $(CBLASLIB)
@@ -26,7 +26,7 @@ slev1 = cblas_srotg.o cblas_srotmg.o cblas_srot.o  cblas_srotm.o \
         cblas_sswap.o cblas_sscal.o  cblas_scopy.o cblas_saxpy.o \
         cblas_sdot.o  cblas_sdsdot.o cblas_snrm2.o cblas_sasum.o \
         cblas_isamax.o sdotsub.o sdsdotsub.o snrm2sub.o sasumsub.o \
-        isamaxsub.o
+        isamaxsub.o cblas_printf.o
 
 # Files for level 1 double precision real
 dlev1 = cblas_drotg.o cblas_drotmg.o cblas_drot.o  cblas_drotm.o \

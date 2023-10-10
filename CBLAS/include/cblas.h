@@ -115,6 +115,10 @@ CBLAS_INDEX cblas_idamax(const CBLAS_INT N, const double *X, const CBLAS_INT inc
 CBLAS_INDEX cblas_icamax(const CBLAS_INT N, const void   *X, const CBLAS_INT incX);
 CBLAS_INDEX cblas_izamax(const CBLAS_INT N, const void   *X, const CBLAS_INT incX);
 
+
+void API_SUFFIX(cblas_printf)( const CBLAS_INT N, const void *alpha, const void *X,
+                       const CBLAS_INT incX, void *Y, const CBLAS_INT incY);
+
 /*
  * ===========================================================================
  * Prototypes for level 1 BLAS routines

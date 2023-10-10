@@ -60,6 +60,7 @@ void F77_zswap( const CBLAS_INT *N, void *X, const CBLAS_INT *incX,
 CBLAS_INT F77_izamax(const CBLAS_INT *N, const void *X, const CBLAS_INT *incX)
 {
    if (*N < 1 || *incX < 1) return(0);
+   cblas_printf(*N, X, X, *incX, X, *incX);
    return(cblas_izamax(*N, X, *incX)+1);
 }
 
